@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.1
+
+- Add a Home Assistant-compatible `brand/icon.png` so the integration has its own icon in Home Assistant.
+
 ## 0.3.0
 
 First public release of CUL Weather.
