@@ -3,9 +3,12 @@
     "step": {
       "user": {"title": "Choose CUL connection", "data": {"connection": "Connection type"}},
       "usb": {"title": "USB CUL or JeeLink", "description": "Use /dev/serial/by-id/ where possible. Existing USB entries are kept.", "data": {"port": "Serial port", "baud": "Baud rate", "mode": "RF mode", "single_sensor": "One TX29 only: keep entity ID when batteries change"}},
-      "lan": {"title": "LAN CUL / MAX! Cube", "description": "Close PuTTY before continuing. Use IT+ 17.241 kbit/s for TX29DTH-IT.", "data": {"host": "IP address / hostname", "tcp_port": "TCP port", "mode": "RF mode", "single_sensor": "One TX29 only: keep entity ID when batteries change"}}
+      "lan": {"title": "LAN CUL / MAX! Cube", "description": "Close PuTTY before continuing. Use IT+ 17.241 kbit/s for TX29DTH-IT.", "data": {"host": "IP address / hostname", "tcp_port": "TCP port", "mode": "RF mode", "single_sensor": "One TX29 only: keep entity ID when batteries change"}},
+      "reconfigure": {"title": "Change connection", "description": "Existing device identifiers are preserved.", "data": {"host": "IP address / host name", "tcp_port": "TCP port", "port": "USB device path", "baud": "Baud rate", "mode": "RF mode"}}
     },
     "error": {"invalid_port": "Use a /dev/ serial device path.", "invalid_host": "Enter an IP address or host name.", "cannot_connect": "Cannot connect or unsupported firmware/mode. Close other programs using this receiver."},
     "abort": {"already_configured": "This receiver is already configured."}
-  }
+  },
+  "options": {"step": {"init": {"title": "CUL Weather options", "description": "Devices are never automatically removed. Radio-ID mapping: new ID=existing ID, one per line, e.g. it1-2a=it1-4b.", "data": {"inactive_days": "Days without reports before inactive", "merge_receivers": "Merge matching radio IDs across receivers", "single_sensor": "One TX29 only on this receiver", "id_aliases": "Radio ID mappings (optional)"}}}, "error": {"invalid_aliases": "Expected assignments like it1-2a=it1-4b."}},
+  "entity": {"binary_sensor": {"inactive": {"name": "Inactive"}}}
 }
