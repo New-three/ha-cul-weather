@@ -1,0 +1,11 @@
+{
+  "config": {
+    "step": {
+      "user": {"title": "CUL-Verbindung auswählen", "data": {"connection": "Verbindungsart"}},
+      "usb": {"title": "USB-CUL oder JeeLink", "description": "Möglichst /dev/serial/by-id/ verwenden. Bestehende USB-Einträge bleiben erhalten.", "data": {"port": "Serieller Gerätepfad", "baud": "Baudrate", "mode": "Funkmodus", "single_sensor": "Nur ein TX29: Entitäten nach Batteriewechsel beibehalten"}},
+      "lan": {"title": "LAN-CUL / MAX! Cube", "description": "PuTTY vorher schließen. Für TX29DTH-IT: IT+ 17,241 kbit/s wählen.", "data": {"host": "IP-Adresse / Hostname", "tcp_port": "TCP-Port", "mode": "Funkmodus", "single_sensor": "Nur ein TX29: Entitäten nach Batteriewechsel beibehalten"}}
+    },
+    "error": {"invalid_port": "Bitte Gerätepfad unter /dev/ eingeben.", "invalid_host": "Bitte IP-Adresse oder Hostnamen eingeben.", "cannot_connect": "Verbindung oder Firmware-Antwort fehlgeschlagen. Andere Programme wie PuTTY schließen."},
+    "abort": {"already_configured": "Dieser Empfänger ist bereits eingerichtet."}
+  }
+}
