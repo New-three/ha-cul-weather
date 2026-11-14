@@ -15,6 +15,12 @@ FIELDS = {
         device_class=BinarySensorDeviceClass.BATTERY,
         entity_category=EntityCategory.DIAGNOSTIC,
     ),
+    "inactive": BinarySensorEntityDescription(
+        key="inactive",
+        device_class=BinarySensorDeviceClass.PROBLEM,
+        entity_category=EntityCategory.DIAGNOSTIC,
+        translation_key="inactive",
+    ),
 }
 
 
