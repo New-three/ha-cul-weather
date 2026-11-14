@@ -3,9 +3,12 @@
     "step": {
       "user": {"title": "CUL-Verbindung auswählen", "data": {"connection": "Verbindungsart"}},
       "usb": {"title": "USB-CUL oder JeeLink", "description": "Möglichst /dev/serial/by-id/ verwenden. Bestehende USB-Einträge bleiben erhalten.", "data": {"port": "Serieller Gerätepfad", "baud": "Baudrate", "mode": "Funkmodus", "single_sensor": "Nur ein TX29: Entitäten nach Batteriewechsel beibehalten"}},
-      "lan": {"title": "LAN-CUL / MAX! Cube", "description": "PuTTY vorher schließen. Für TX29DTH-IT: IT+ 17,241 kbit/s wählen.", "data": {"host": "IP-Adresse / Hostname", "tcp_port": "TCP-Port", "mode": "Funkmodus", "single_sensor": "Nur ein TX29: Entitäten nach Batteriewechsel beibehalten"}}
+      "lan": {"title": "LAN-CUL / MAX! Cube", "description": "PuTTY vorher schließen. Für TX29DTH-IT: IT+ 17,241 kbit/s wählen.", "data": {"host": "IP-Adresse / Hostname", "tcp_port": "TCP-Port", "mode": "Funkmodus", "single_sensor": "Nur ein TX29: Entitäten nach Batteriewechsel beibehalten"}},
+      "reconfigure": {"title": "Verbindung ändern", "description": "Die bestehende Gerätezuordnung bleibt erhalten.", "data": {"host": "IP-Adresse / Hostname", "tcp_port": "TCP-Port", "port": "USB-Gerätepfad", "baud": "Baudrate", "mode": "Funkmodus"}}
     },
     "error": {"invalid_port": "Bitte Gerätepfad unter /dev/ eingeben.", "invalid_host": "Bitte IP-Adresse oder Hostnamen eingeben.", "cannot_connect": "Verbindung oder Firmware-Antwort fehlgeschlagen. Andere Programme wie PuTTY schließen."},
     "abort": {"already_configured": "Dieser Empfänger ist bereits eingerichtet."}
-  }
+  },
+  "options": {"step": {"init": {"title": "CUL Weather Optionen", "description": "Sensoren werden auch nach Ablauf der Inaktivitätsgrenze nicht automatisch gelöscht. ID-Zuordnung: neue Funk-ID=alte Funk-ID, je Zeile, z. B. it1-2a=it1-4b.", "data": {"inactive_days": "Nach wie vielen Tagen als inaktiv markieren", "merge_receivers": "Identische Funk-IDs verschiedener Empfänger zusammenführen", "single_sensor": "Nur ein TX29 auf diesem Empfänger", "id_aliases": "Funk-ID-Zuordnungen (optional)"}}}, "error": {"invalid_aliases": "Bitte ID-Zuordnungen im Format it1-2a=it1-4b eingeben."}},
+  "entity": {"binary_sensor": {"inactive": {"name": "Inaktiv"}}}
 }
