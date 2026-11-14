@@ -4,10 +4,11 @@
   "codeowners": [],
   "config_flow": true,
   "documentation": "https://github.com/New-three/ha-cul-weather",
+  "issue_tracker": "https://github.com/New-three/ha-cul-weather/issues",
   "integration_type": "hub",
   "iot_class": "local_push",
   "requirements": [
     "pyserial-asyncio-fast==0.16"
   ],
-  "version": "0.3.0"
+  "version": "0.3.1"
 }
