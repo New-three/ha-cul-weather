@@ -4,6 +4,22 @@ from dataclasses import dataclass
 import re
 
 
+def parse_aliases(value: str) -> dict[str, str]:
+    """Read explicit new-radio-id=existing-radio-id mappings."""
+    aliases = {}
+    for raw in value.splitlines():
+        line = raw.strip().lower()
+        if not line or line.startswith("#"):
+            continue
+        parts = line.split("=")
+        if len(parts) != 2 or not all(re.fullmatch(r"(?:it1|it2)-[0-9a-f]{2}", part.strip()) for part in parts):
+            raise ValueError("Expected one new-id=existing-id per line")
+        aliases[parts[0].strip()] = parts[1].strip()
+    if any(target in aliases for target in aliases.values()):
+        raise ValueError("Chained aliases are not supported")
+    return aliases
+
+
 @dataclass(frozen=True)
 class Reading:
     address: str
