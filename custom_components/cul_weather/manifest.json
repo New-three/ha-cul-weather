@@ -3,7 +3,7 @@
   "name": "CUL Weather",
   "codeowners": [],
   "config_flow": true,
-  "documentation": "https://github.com/heliflieger/a-culfw/blob/master/culfw/docs/commandref.html",
+  "documentation": "https://github.com/New-three/ha-cul-weather",
   "integration_type": "hub",
   "iot_class": "local_push",
   "requirements": [
