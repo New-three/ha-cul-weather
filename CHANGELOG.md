@@ -2,7 +2,8 @@
 
 ## 0.3.1
 
-- Add a Home Assistant-compatible `brand/icon.png` so the integration has its own icon in Home Assistant.
+- Add a Home Assistant-compatible `brand/icon.png` so the integration has its own icon.
+- Place English and German translations in Home Assistant's expected `translations/` folder.
 
 ## 0.3.0
 
